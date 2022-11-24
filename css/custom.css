@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
 :root {
   font-size: 16px;
 }
 
 body {
   background: url("../img/carretera.webp");
-  font-family: "Staatliches", cursive;
+  font-family: "open sans", cursive;
   background-size: cover;
+  font-weight: 400;
   background-attachment: fixed;
 }
 
@@ -14,7 +16,8 @@ html {
 }
 
 .titulo {
-  font-family: "Staatliches", cursive;
+  font-family: "open sans", cursive;
+  font-weight: 800;
   font-size: 4rem;
   padding: 3rem 0;
   margin: 0;
@@ -118,9 +121,28 @@ form {
 }
 
 .select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #9e9e9e;
+}
+
+.select-wrapper input.select-dropdown:hover {
   border-bottom: 1px solid rgb(14, 160, 53);
 }
 
 .resultados {
-  color: #4caf50;
+  font-weight: 800;
+  color: rgb(255, 255, 0);
+}
+
+@media (max-width: 680px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    font-size: 8px;
+  }
+  .titulo {
+    width: 90vw;
+  }
 }/*# sourceMappingURL=custom.css.map */
