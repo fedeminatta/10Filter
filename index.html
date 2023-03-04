@@ -1,111 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Buscador múltiples campos</title>
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/materialize.min.css" />
-        <link rel="stylesheet" href="css/custom.min.css" />
-    </head>
-    <body>
-        <h1 class="titulo">Buscador de Autos</h1>
 
-        <div class="contenedor">
-            <form id="buscador">
-                <div class="buscadorr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Buscador múltiples campos</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+</head>
+
+<body>
+    <h1 class="titulo">Buscador de Autos</h1>
+
+    <div class="contenedor">
+        <form id="buscador">
+            <div class="buscadorr">
+                <div class="input-field col">
+                    <select id="marca">
+                        <option value="" selected disabled>Seleccione</option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes Benz">Mercedes Benz</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Dodge">Dodge</option>
+                    </select>
+                    <label for="marca">Marca</label>
+                </div>
+                <div class="input-field col">
+                    <select id="year">
+                        <option value="" disabled selected>Seleccione</option>
+                    </select>
+                    <label for="year">Año</label>
+                </div>
+                <div class="input-field col">
+                    <select id="minimo">
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="20000">20,000</option>
+                        <option value="30000">30,000</option>
+                        <option value="40000">40,000</option>
+                        <option value="50000">50,000</option>
+                        <option value="60000">60,000</option>
+                        <option value="70000">70,000</option>
+                        <option value="80000">80,000</option>
+                        <option value="90000">90,000</option>
+                    </select>
+                    <label for="minimo">Precio Min</label>
+                </div>
+                <div class="input-field col">
+                    <select id="maximo">
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="20000">20,000</option>
+                        <option value="30000">30,000</option>
+                        <option value="40000">40,000</option>
+                        <option value="50000">50,000</option>
+                        <option value="60000">60,000</option>
+                        <option value="70000">70,000</option>
+                        <option value="80000">80,000</option>
+                        <option value="90000">90,000</option>
+                    </select>
+                    <label for="maximo">Precio Max</label>
+                </div>
+                <div class="row">
                     <div class="input-field col">
-                        <select id="marca">
-                            <option value="" selected disabled>Seleccione</option>
-                            <option value="Audi">Audi</option>
-                            <option value="BMW">BMW</option>
-                            <option value="Mercedes Benz">Mercedes Benz</option>
-                            <option value="Chevrolet">Chevrolet</option>
-                            <option value="Ford">Ford</option>
-                            <option value="Dodge">Dodge</option>
-                        </select>
-                        <label for="marca">Marca</label>
-                    </div>
-                    <div class="input-field col">
-                        <select id="year">
+                        <select id="puertas">
                             <option value="" disabled selected>Seleccione</option>
+                            <option value="2">2</option>
+                            <option value="4">4</option>
                         </select>
-                        <label for="year">Año</label>
+                        <label for="puertas">Puertas</label>
                     </div>
                     <div class="input-field col">
-                        <select id="minimo">
+                        <select id="transmision">
                             <option value="" disabled selected>Seleccione</option>
-                            <option value="20000">20,000</option>
-                            <option value="30000">30,000</option>
-                            <option value="40000">40,000</option>
-                            <option value="50000">50,000</option>
-                            <option value="60000">60,000</option>
-                            <option value="70000">70,000</option>
-                            <option value="80000">80,000</option>
-                            <option value="90000">90,000</option>
+                            <option value="automatico">Automática</option>
+                            <option value="manual">Manual</option>
                         </select>
-                        <label for="minimo">Precio Min</label>
+                        <label for="transmision">Transmisión</label>
                     </div>
                     <div class="input-field col">
-                        <select id="maximo">
+                        <select id="color">
                             <option value="" disabled selected>Seleccione</option>
-                            <option value="20000">20,000</option>
-                            <option value="30000">30,000</option>
-                            <option value="40000">40,000</option>
-                            <option value="50000">50,000</option>
-                            <option value="60000">60,000</option>
-                            <option value="70000">70,000</option>
-                            <option value="80000">80,000</option>
-                            <option value="90000">90,000</option>
+                            <option value="Negro">Negro</option>
+                            <option value="Azul">Azul</option>
+                            <option value="Blanco">Blanco</option>
+                            <option value="Rojo">Rojo</option>
                         </select>
-                        <label for="maximo">Precio Max</label>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col">
-                            <select id="puertas">
-                                <option value="" disabled selected>Seleccione</option>
-                                <option value="2">2</option>
-                                <option value="4">4</option>
-                            </select>
-                            <label for="puertas">Puertas</label>
-                        </div>
-                        <div class="input-field col">
-                            <select id="transmision">
-                                <option value="" disabled selected>Seleccione</option>
-                                <option value="automatico">Automática</option>
-                                <option value="manual">Manual</option>
-                            </select>
-                            <label for="transmision">Transmisión</label>
-                        </div>
-                        <div class="input-field col">
-                            <select id="color">
-                                <option value="" disabled selected>Seleccione</option>
-                                <option value="Negro">Negro</option>
-                                <option value="Azul">Azul</option>
-                                <option value="Blanco">Blanco</option>
-                                <option value="Rojo">Rojo</option>
-                            </select>
-                            <label for="color">Color</label>
-                        </div>
+                        <label for="color">Color</label>
                     </div>
                 </div>
-            </form>
+            </div>
+        </form>
 
-            <h1 class="resultados">Resultados</h1>
-            <div id="resultado"></div>
-        </div>
+        <h1 class="resultados">Resultados</h1>
+        <div id="resultado"></div>
+    </div>
 
-        <script src="js/jquery-3.6.1.min.js"></script>
-        <script src="js/materialize.min.js"></script>
-        <script src="js/db.js"></script>
-        <script src="js/app.js"></script>
-        <script>
-            // materialize
-            document.addEventListener('DOMContentLoaded', function () {
-                var elems = document.querySelectorAll('select');
-                var instances = M.FormSelect.init(elems);
-            });
-        </script>
-    </body>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // materialize
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+</body>
+
 </html>
