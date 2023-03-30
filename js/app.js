@@ -75,13 +75,33 @@ function mostrarAutos(autos) {
 	limpiarHTML();
 
 	autos.forEach((auto) => {
-		const { marca, modelo, year, puertas, transmision, precio, color } = auto;
-		const autoHTML = document.createElement('p');
-
+		const {
+			marca,
+			modelo,
+			year,
+			puertas,
+			transmision,
+			precio,
+			color,
+			imagen,
+		} = auto;
+		const autoHTML = document.createElement('div');
+		autoHTML.setAttribute('data-aos', 'fade-down');
+		autoHTML.setAttribute('data-aos-duration', '250');
+		autoHTML.setAttribute('data-aos-offset', '500');
+		autoHTML.classList = 'auto';
 		autoHTML.innerHTML = ` 
-      ${marca} ${modelo} - ${year} - ${puertas} Puertas - Transmisión: ${transmision} - Precio: ${precio}
-      - Color ${color}
-    `;
+		<img src="${imagen}" alt="" />
+			<p>
+				Marca: ${marca} <br/>
+				Modelo: ${modelo} <br/>
+				Año: ${year} <br/>
+				Puertas: ${puertas} <br/>
+				Transmisión: ${transmision} <br/>
+				Precio: ${precio} <br/>
+				Color ${color} 
+			</p>
+    	`;
 
 		// Insertar en el html
 		resultado.appendChild(autoHTML);
