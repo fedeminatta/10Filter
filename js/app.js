@@ -86,9 +86,10 @@ function mostrarAutos(autos) {
 			imagen,
 		} = auto;
 		const autoHTML = document.createElement('div');
-		autoHTML.setAttribute('data-aos', 'fade-down');
+		autoHTML.setAttribute('data-aos', 'fade-left');
 		autoHTML.setAttribute('data-aos-duration', '250');
-		autoHTML.setAttribute('data-aos-offset', '500');
+		autoHTML.setAttribute('data-aos-offset', '100');
+		autoHTML.setAttribute('data-aos-anchor-placement', 'top-center');
 		autoHTML.classList = 'auto';
 		autoHTML.innerHTML = ` 
 		<img src="${imagen}" alt="" />
